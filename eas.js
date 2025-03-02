@@ -25,7 +25,12 @@ document.body.appendChild(changeSize);
 
 changeSize.addEventListener("click", () => {
     let size = prompt("Choose a grid size from 1 to 100");
-    createGrid(size);
+    if(size > 100 || size < 1){
+        alert("Size must be greater than 1 and less than 101!");
+    }
+    else{
+        createGrid(size);
+    }
 });
 
 
