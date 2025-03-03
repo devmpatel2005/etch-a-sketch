@@ -11,13 +11,13 @@ function createGrid(size){
         div.style.height = (640 / size) + "px";
         container.appendChild(div);
 
-        const boxes = document.querySelectorAll(".grid-item");
-        boxes.forEach((box) => {
-            box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "black";
-            });
-        });
     }
+    const boxes = document.querySelectorAll(".grid-item");
+    boxes.forEach((box) => {
+        box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "black";
+        });
+    });
 }
 
 const btns = document.createElement("div");
@@ -46,8 +46,9 @@ changeSize.addEventListener("click", () => {
     }
 });
 
-const boxes = document.querySelectorAll(".grid-item");
+
 clear.addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".grid-item");
     boxes.forEach((box) => {
         box.style.backgroundColor = "white";
     })
